@@ -1,5 +1,7 @@
 :root {
     --font-family-default: 'Roboto', Arial, Helvetica, sans-serif;
+    --color-primary: #b2b2f8;
+    --background-button-secondary: #484662;
     --header-background: #363636;
     --header-navigation-color: #fff;
     --header-navigation-color-hover: #fff;
