@@ -1,3 +1,20 @@
+:root {
+    --font-family-default: 'Roboto', Arial, Helvetica, sans-serif;
+    --header-background: #363636;
+    --header-navigation-color: #fff;
+    --header-navigation-color-hover: #fff;
+    --header-navigation-background-hover: #484662;
+    --header-navigation-color-selected: #fff;
+    --header-navigation-background-selected: #444;
+    --drawer-icon-color: #b2b2f8;
+    --drawer-icon-background-hover: #464e5b;
+    --typography-white: #fff;
+    --border-color-default: #fff;
+    --logo-fill-color-default: #fff;
+    --avatar-background: #484662;
+    --avatar-color: #b2b2f8;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -37,6 +54,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: var(--font-family-default);
 }
 
 /* A elements that don't have a class get default styles */

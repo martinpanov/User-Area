@@ -26,43 +26,47 @@ import UtilitiesNotifications from './components/Utilities/UtilitiesNotification
 import UtilitiesUserPreferences from './components/Utilities/UtilitiesUserPreferences/UtilitiesUserPreferences';
 import UtilitiesUsers from './components/Utilities/UtilitiesUsers/UtilitiesUsers';
 import UtilitiesSFTP from './components/Utilities/UtilitiesSFTP/UtilitiesSFTP';
+import Header from './components/Header/Header';
 
 function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/websites/list" element={<WebsitesList />} />
-            <Route path="/websites/list/:id" element={<WebsitesManageWebsite />} />
-            <Route path="/websites/list/:id/users" element={<WebsitesUsers />} />
-            <Route path="/transfer-send/:id" element={<WebsitesTransferOwnership />} />
-            <Route path="/delete/:id" element={<WebsitesDelete />} />
-            <Route path="/websites/collaborations" element={<WebsitesCollaborations />} />
+        <>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/websites/list" element={<WebsitesList />} />
+                <Route path="/websites/list/:id" element={<WebsitesManageWebsite />} />
+                <Route path="/websites/list/:id/users" element={<WebsitesUsers />} />
+                <Route path="/transfer-send/:id" element={<WebsitesTransferOwnership />} />
+                <Route path="/delete/:id" element={<WebsitesDelete />} />
+                <Route path="/websites/collaborations" element={<WebsitesCollaborations />} />
 
-            <Route path="/services/hosting" element={<ServicesHosting />} />
-            <Route path="/services/domains" element={<ServicesDomains />} />
-            <Route path="/services/domains/:id" element={<ServicesDomains />} />
-            <Route path="/services/change-primary-domain/:id" element={<ServicesChangePrimaryDomain />} />
-            <Route path="/services/emailmarketing" element={<ServicesEmailMarketing />} />
+                <Route path="/services/hosting" element={<ServicesHosting />} />
+                <Route path="/services/domains" element={<ServicesDomains />} />
+                <Route path="/services/domains/:id" element={<ServicesDomains />} />
+                <Route path="/services/change-primary-domain/:id" element={<ServicesChangePrimaryDomain />} />
+                <Route path="/services/emailmarketing" element={<ServicesEmailMarketing />} />
 
-            <Route path="/billing/details" element={<BillingDetails />} />
-            <Route path="/billing/payment-history" element={<BillingPaymentHistory />} />
-            <Route path="/billing/renew" element={<BillingRenewals />} />
+                <Route path="/billing/details" element={<BillingDetails />} />
+                <Route path="/billing/payment-history" element={<BillingPaymentHistory />} />
+                <Route path="/billing/renew" element={<BillingRenewals />} />
 
-            <Route path="/referral/program" element={<ReferralsProgram />} />
-            <Route path="/referral/awards" element={<ReferralsAwards />} />
-            <Route path="/referral/sign-up" element={<ReferralsAffiliate />} />
+                <Route path="/referral/program" element={<ReferralsProgram />} />
+                <Route path="/referral/awards" element={<ReferralsAwards />} />
+                <Route path="/referral/sign-up" element={<ReferralsAffiliate />} />
 
-            <Route path="/marketplace/hosting" element={<MarketplaceHosting />} />
-            <Route path="/marketplace/domains" element={<MarketplaceDomains />} />
-            <Route path="/marketplace/free-emailmarketing" element={<MarketplaceEmailMarketing />} />
-            <Route path="/marketplace/perks" element={<MarketplacePerks />} />
+                <Route path="/marketplace/hosting" element={<MarketplaceHosting />} />
+                <Route path="/marketplace/domains" element={<MarketplaceDomains />} />
+                <Route path="/marketplace/free-emailmarketing" element={<MarketplaceEmailMarketing />} />
+                <Route path="/marketplace/perks" element={<MarketplacePerks />} />
 
-            <Route path="/utilities/profile" element={<UtilitiesProfile />} />
-            <Route path="/utilities/notifications" element={<UtilitiesNotifications />} />
-            <Route path="/utilities/user-preferences" element={<UtilitiesUserPreferences />} />
-            <Route path="/utilities/users" element={<UtilitiesUsers />} />
-            <Route path="/utilities/sftp-multisite" element={<UtilitiesSFTP />} />
-        </Routes>
+                <Route path="/utilities/profile" element={<UtilitiesProfile />} />
+                <Route path="/utilities/notifications" element={<UtilitiesNotifications />} />
+                <Route path="/utilities/user-preferences" element={<UtilitiesUserPreferences />} />
+                <Route path="/utilities/users" element={<UtilitiesUsers />} />
+                <Route path="/utilities/sftp-multisite" element={<UtilitiesSFTP />} />
+            </Routes>
+        </>
     );
 }
 
