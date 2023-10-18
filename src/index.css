@@ -1,6 +1,7 @@
 :root {
     --font-family-default: 'Roboto', Arial, Helvetica, sans-serif;
     --color-primary: #b2b2f8;
+    --background-button-primary: #b2b2f8;
     --background-button-secondary: #484662;
     --header-background: #363636;
     --header-navigation-color: #fff;
@@ -11,10 +12,14 @@
     --drawer-icon-color: #b2b2f8;
     --drawer-icon-background-hover: #464e5b;
     --typography-white: #fff;
+    --typography-dark: #fff;
     --border-color-default: #fff;
     --logo-fill-color-default: #fff;
     --avatar-background: #484662;
     --avatar-color: #b2b2f8;
+    --background-component-primary: #363636;
+    --background-main: #121212;
+    --color-button-white: #363636;
 }
 
 /* Box sizing rules */
