@@ -33,37 +33,29 @@ function WebsitesAndServices() {
             <h2 className={styles["websites-and-services__heading"]}>My websites and services</h2>
             <div className={styles["websites-and-services__wrapper"]}>
                 <div className={styles["websites-and-services__card"]}>
-                    <div className={styles["websites-and-services__card-wrapper"]}>
-                        <WebsitesSVG />
-                        <h3 className={styles["websites-and-services__card-heading"]}>Websites</h3>
-                        <p className={styles["websites-and-services__card-text"]}>You have 8 websites</p>
-                        <button className={styles["websites-and-services__button"]}>Manage</button>
-                    </div>
+                    <WebsitesSVG />
+                    <h3 className={styles["websites-and-services__card-heading"]}>Websites</h3>
+                    <p className={styles["websites-and-services__card-text"]}>You have 8 websites</p>
+                    <button className={styles["websites-and-services__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
-                    <div className={styles["websites-and-services__card-wrapper"]}>
-                        <HostingSVG />
-                        <h3 className={styles["websites-and-services__card-heading"]}>Hosting</h3>
-                        <span className={styles["websites-and_services__card-text"]}>GoGeek</span>
-                        <p className={styles["websites-and-services__card-text"]}>Expires on Jul 3, 2024</p>
-                        <button className={styles["websites-and-services__button"]}>Manage</button>
-                    </div>
+                    <HostingSVG />
+                    <h3 className={styles["websites-and-services__card-heading"]}>Hosting</h3>
+                    <span className={styles["websites-and_services__card-text"]}>GoGeek</span>
+                    <p className={styles["websites-and-services__card-text"]}>Expires on Jul 3, 2024</p>
+                    <button className={styles["websites-and-services__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
-                    <div className={styles["websites-and-services__card-wrapper"]}>
-                        <DomainsSVG />
-                        <h3 className={styles["websites-and-services__card-heading"]}>Domains</h3>
-                        <p className={styles["websites-and-services__card-text"]}>You have 3 domains</p>
-                        <button className={styles["websites-and-services__button"]}>Manage</button>
-                    </div>
+                    <DomainsSVG />
+                    <h3 className={styles["websites-and-services__card-heading"]}>Domains</h3>
+                    <p className={styles["websites-and-services__card-text"]}>You have 3 domains</p>
+                    <button className={styles["websites-and-services__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
-                    <div className={styles["websites-and-services__card-wrapper"]}>
-                        <EmailMarketingSVG />
-                        <h3 className={styles["websites-and-services__card-heading"]}>Email Marketing</h3>
-                        <p className={styles["websites-and-services__card-text"]}>You have no Email Marketing plans</p>
-                        <button className={styles["websites-and-services__button"]}>Learn More</button>
-                    </div>
+                    <EmailMarketingSVG />
+                    <h3 className={styles["websites-and-services__card-heading"]}>Email Marketing</h3>
+                    <p className={styles["websites-and-services__card-text"]}>You have no Email Marketing plans</p>
+                    <button className={styles["websites-and-services__button"]}>Learn More</button>
                 </div>
             </div>
         </section>
