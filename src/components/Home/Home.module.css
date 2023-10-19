@@ -11,7 +11,7 @@
     padding: 4rem 0rem;
 }
 
-.hero__svg-bug {
+.hero__svg {
     display: none;
 }
 
@@ -21,10 +21,6 @@
     flex-direction: column;
     max-width: 560px;
     gap: 1.25rem;
-}
-
-.hero__svg-security {
-    display: none;
 }
 
 .hero__subheading {
@@ -55,18 +51,15 @@
 }
 
 #websites-and-services {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0rem 1rem;
     color: var(--typography-dark);
-}
-
-.websites-and-services__heading {
-    margin-bottom: 1rem;
 }
 
 .websites-and-services__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem 0rem;
     gap: 1.25rem;
 }
 
@@ -93,6 +86,52 @@
     cursor: pointer;
 }
 
+#tips-and-suggestions {
+    padding: 2rem 1rem 0rem 1rem;
+    color: var(--typography-dark);
+}
+
+.tips-and-suggestions__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem 0rem 2rem 0rem;
+}
+
+.tips-and-suggestions__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+    background-color: var(--background-component-primary);
+    border-radius: 0.75rem;
+}
+
+.tips-and-suggestions__svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.tips-and-suggestions__card-link-and-arrow {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tips-and-suggestions__load-more {
+    all: unset;
+    display: block;
+    margin: 0 auto;
+}
+
+.tips-and-suggestions__card-link-text, .tips-and-suggestions__load-more {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: 700;
+    cursor: pointer;
+}
+
 @media (min-width: 800px) {
     #websites-and-services {
         margin: 0 auto;
@@ -109,6 +148,22 @@
         padding: 2rem 0rem;
         text-align: center;
     }
+    
+    .tips-and-suggestions__svg {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    #tips-and-suggestions {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .tips-and-suggestions__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1500px) {
@@ -116,11 +171,7 @@
         gap: 6rem;
     }
 
-    .hero__svg-bug {
-        display: block;
-    }
-
-    .hero__svg-security {
+    .hero__svg {
         display: block;
     }
 
