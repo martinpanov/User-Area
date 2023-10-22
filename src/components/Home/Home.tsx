@@ -12,6 +12,7 @@ export default function Home() {
             <Hero />
             <WebsitesAndServices />
             <TipsAndSuggestions />
+            <RecentBlogPosts />
         </main>
     );
 }
@@ -185,6 +186,58 @@ function TipsAndSuggestions() {
             {!(isLoadMore[0] && isLoadMore[1]) &&
                 <button onClick={clickHandler} className={styles["tips-and-suggestions__load-more"]}>Load more</button>
             }
+        </section>
+    );
+}
+
+function RecentBlogPosts() {
+    return (
+        <section id={styles["recent-blog-posts"]}>
+            <h2 className={styles["recent-blog-posts__heading"]}>Recent Blog Posts</h2>
+            <div className={styles["recent-blog-posts__wrapper"]}>
+                <div className={styles["recent-blog-posts__card"]}>
+                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                        <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Response_to_HTTP2_Rapid_Reset-752x342.jpg" alt="http2" />
+                    </div>
+                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                            Response to HTTP/2 Rapid Reset: SiteGround's Swift Action Against a Novel Vulnerability
+                        </h4>
+                    </div>
+                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
+                        <time>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    </div>
+                </div>
+                <div className={styles["recent-blog-posts__card"]}>
+                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                        <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Exim-security-vulnerability_1400x700-752x342.jpg" alt="exim" />
+                    </div>
+                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                            Exim's Mail Vulnerability: A Tale of Swift Action and Unaffected SiteGround Clients
+                        </h4>
+                    </div>
+                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
+                        <time>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    </div>
+                </div>
+                <div className={styles["recent-blog-posts__card"]}>
+                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                        <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/tw_chat_recap_email_marketing-752x342.jpg" alt="expert-chat" />
+                    </div>
+                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                            [Expert Chat] Getting Started with Email Marketing
+                        </h4>
+                    </div>
+                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
+                        <time>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }
