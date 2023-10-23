@@ -4,11 +4,12 @@ import { DomainsSVG, EmailMarketingSVG, HostingSVG, WebsitesSVG } from './Websit
 import { HeroSVGBug, HeroSVGSecurity } from './HeroSVGs';
 import { Arrow, Backup, BecomeAffiliate, Collaborators, DomainPrivacy, InviteFriends, Malware, NextWebsiteAndNewDomain, TransferDomains, TransferWebsite, UnauthorizedAccess } from './TipsAndSuggestionsSVG';
 import { useState } from 'react';
+import useWindowSize from '../../hooks/useWindowSize';
 
 
 export default function Home() {
     return (
-        <main className={styles["main"]}>
+        <main>
             <Hero />
             <WebsitesAndServices />
             <TipsAndSuggestions />
@@ -34,7 +35,7 @@ function Hero() {
 
 function WebsitesAndServices() {
     return (
-        <section id={styles["websites-and-services"]}>
+        <section id={styles["websites-and-services"]} className={styles["section--standard"]}>
             <h2 className={styles["websites-and-services__heading"]}>My websites and services</h2>
             <div className={styles["websites-and-services__wrapper"]}>
                 <div className={styles["websites-and-services__card"]}>
@@ -144,7 +145,7 @@ function TipsAndSuggestions() {
     };
 
     return (
-        <section id={styles["tips-and-suggestions"]}>
+        <section id={styles["tips-and-suggestions"]} className={styles["section--standard"]}>
             <h2 className={styles["tips-and-suggestions__heading"]}>Success Tips and Suggestions</h2>
             <div className={styles["tips-and-suggestions__wrapper"]}>
                 {TipsAndSuggestionsInfo.slice(0, 4).map(card => (
@@ -191,18 +192,26 @@ function TipsAndSuggestions() {
 }
 
 function RecentBlogPosts() {
+    const windowWidth = useWindowSize();
+
     return (
-        <section id={styles["recent-blog-posts"]}>
+        <section id={styles["recent-blog-posts"]} className={styles["section--standard"]}>
             <h2 className={styles["recent-blog-posts__heading"]}>Recent Blog Posts</h2>
             <div className={styles["recent-blog-posts__wrapper"]}>
                 <div className={styles["recent-blog-posts__card"]}>
                     <div className={styles["recent-blog-posts__card-image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Response_to_HTTP2_Rapid_Reset-752x342.jpg" alt="http2" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                    <div className={styles["recent-blog-posts__card-text-container"]}>
                         <h4 className={styles["recent-blog-posts__card-heading"]}>
                             Response to HTTP/2 Rapid Reset: SiteGround's Swift Action Against a Novel Vulnerability
                         </h4>
+                        {windowWidth > 800 ? (
+                            <p className={styles["recent-blog-posts__card-text"]}>
+                                In the dynamic world of cybersecurity, it's not unusual to encounter new challenges. Recently, a novel vulnerability, dubbed the "HTTP/2 Rapid Reset" attack, was discovered. Given that HTTP/2 is considered a relatively new protocol, we see more modern and more clever ways to perform attacks every day. But this latest vulnerability has the potential to…
+                            </p>
+                        ) : null
+                        }
                     </div>
                     <div className={styles["recent-blog-posts__card-time-link-container"]}>
                         <time>10/11/2023</time>
@@ -213,10 +222,16 @@ function RecentBlogPosts() {
                     <div className={styles["recent-blog-posts__card-image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Exim-security-vulnerability_1400x700-752x342.jpg" alt="exim" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                    <div className={styles["recent-blog-posts__card-text-container"]}>
                         <h4 className={styles["recent-blog-posts__card-heading"]}>
                             Exim's Mail Vulnerability: A Tale of Swift Action and Unaffected SiteGround Clients
                         </h4>
+                        {windowWidth > 800 ? (
+                            <p className={styles["recent-blog-posts__card-text"]}>
+                                Picture this: a lively party, a toddler's bedtime routine, a road trip - this is what three of our security engineers were in the middle of on that particular Saturday, September 30th. Suddenly, their phones beep at the same time in unison, even though far apart, cutting through the noise of the party, the hush…
+                            </p>
+                        ) : null
+                        }
                     </div>
                     <div className={styles["recent-blog-posts__card-time-link-container"]}>
                         <time>10/11/2023</time>
@@ -227,10 +242,16 @@ function RecentBlogPosts() {
                     <div className={styles["recent-blog-posts__card-image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/tw_chat_recap_email_marketing-752x342.jpg" alt="expert-chat" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-heading-container"]}>
+                    <div className={styles["recent-blog-posts__card-text-container"]}>
                         <h4 className={styles["recent-blog-posts__card-heading"]}>
                             [Expert Chat] Getting Started with Email Marketing
                         </h4>
+                        {windowWidth > 800 ? (
+                            <p className={styles["recent-blog-posts__card-text"]}>
+                                Whether you have a small personal or portfolio site, an eCommerce store, or are just starting up a small business website, there is one thing that can effectively boost your online presence at every stage - email marketing. To help you get started and grow your email marketing efforts, right on time for the upcoming…
+                            </p>
+                        ) : null
+                        }
                     </div>
                     <div className={styles["recent-blog-posts__card-time-link-container"]}>
                         <time>10/11/2023</time>

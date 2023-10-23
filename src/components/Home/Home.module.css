@@ -1,5 +1,8 @@
-.main {
-    background-color: var(--background-main);
+.section--standard {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem 1rem 0rem 1rem;
+    color: var(--typography-dark);
 }
 
 #hero {
@@ -50,11 +53,6 @@
     text-transform: uppercase;
 }
 
-#websites-and-services {
-    padding: 2rem 1rem 0rem 1rem;
-    color: var(--typography-dark);
-}
-
 .websites-and-services__wrapper {
     display: flex;
     flex-direction: column;
@@ -84,11 +82,6 @@
     font-weight: bold;
     font-size: 0.875rem;
     cursor: pointer;
-}
-
-#tips-and-suggestions {
-    padding: 2rem 1rem 0rem 1rem;
-    color: var(--typography-dark);
 }
 
 .tips-and-suggestions__wrapper {
@@ -132,11 +125,6 @@
     cursor: pointer;
 }
 
-#recent-blog-posts {
-    padding: 2rem 1rem 0rem 1rem;
-    color: var(--typography-dark);
-}
-
 .recent-blog-posts__wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -154,7 +142,7 @@
     filter: brightness(50%);
 }
 
-.recent-blog-posts__card-heading-container {
+.recent-blog-posts__card-text-container {
     padding: 1.75rem 1.25rem 0.75rem;
     border-bottom: 1px solid var(--border-color-outer);
 }
@@ -175,11 +163,6 @@
 }
 
 @media (min-width: 800px) {
-    #websites-and-services {
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
     .websites-and-services__wrapper {
         flex-direction: row;
     }
@@ -196,17 +179,22 @@
         margin: 0;
     }
 
-    #recent-blog-posts {
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
     .recent-blog-posts__wrapper {
         grid-template-columns: repeat(3, 1fr)
     }
 
-    .recent-blog-posts__card-heading-container {
-        height: 35%;
+    .recent-blog-posts__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recent-blog-posts__card-text-container {
+        flex: 1;
+        border-bottom: none;
+    }
+
+    .recent-blog-posts__card-heading {
+        margin-bottom: 1rem;
     }
 
     .recent-blog-posts__card-link:hover {
@@ -215,11 +203,6 @@
 }
 
 @media (min-width: 1024px) {
-    #tips-and-suggestions {
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
     .tips-and-suggestions__wrapper {
         grid-template-columns: repeat(2, 1fr);
     }

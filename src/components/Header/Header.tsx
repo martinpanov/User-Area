@@ -1,27 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.css';
 import HeaderLogoMobile from './HeaderLogoMobile';
 import HeaderLogo from './HeaderLogo';
 import { Link } from 'react-router-dom';
+import useWindowSize from '../../hooks/useWindowSize';
 
 export default function Header() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [activeLink, setActiveLink] = useState('home');
-
-    useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleWindowResize);
-
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
+    const windowWidth = useWindowSize();
 
     return (
         <header className={styles["header"]}>

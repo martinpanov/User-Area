@@ -27,6 +27,7 @@ import UtilitiesUserPreferences from './components/Utilities/UtilitiesUserPrefer
 import UtilitiesUsers from './components/Utilities/UtilitiesUsers/UtilitiesUsers';
 import UtilitiesSFTP from './components/Utilities/UtilitiesSFTP/UtilitiesSFTP';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
     return (
@@ -66,6 +67,7 @@ function App() {
                 <Route path="/utilities/users" element={<UtilitiesUsers />} />
                 <Route path="/utilities/sftp-multisite" element={<UtilitiesSFTP />} />
             </Routes>
+            <Footer />
         </>
     );
 }
