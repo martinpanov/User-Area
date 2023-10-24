@@ -28,6 +28,8 @@ import UtilitiesUsers from './components/Utilities/UtilitiesUsers/UtilitiesUsers
 import UtilitiesSFTP from './components/Utilities/UtilitiesSFTP/UtilitiesSFTP';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Websites from './components/Websites/Websites/Websites';
+import Services from './components/Services/Services/Services';
 
 function App() {
     return (
@@ -35,18 +37,22 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/websites/list" element={<WebsitesList />} />
-                <Route path="/websites/list/:id" element={<WebsitesManageWebsite />} />
-                <Route path="/websites/list/:id/users" element={<WebsitesUsers />} />
+                <Route path="/websites" element={<Websites />}>
+                    <Route path="list" element={<WebsitesList />} />
+                    <Route path="list/:id" element={<WebsitesManageWebsite />} />
+                    <Route path="list/:id/users" element={<WebsitesUsers />} />
+                    <Route path="collaborations" element={<WebsitesCollaborations />} />
+                </Route>
                 <Route path="/transfer-send/:id" element={<WebsitesTransferOwnership />} />
                 <Route path="/delete/:id" element={<WebsitesDelete />} />
-                <Route path="/websites/collaborations" element={<WebsitesCollaborations />} />
 
-                <Route path="/services/hosting" element={<ServicesHosting />} />
-                <Route path="/services/domains" element={<ServicesDomains />} />
-                <Route path="/services/domains/:id" element={<ServicesDomains />} />
+                <Route path="/services" element={<Services />}>
+                    <Route path="hosting" element={<ServicesHosting />} />
+                    <Route path="domains" element={<ServicesDomains />} />
+                    <Route path="domains/:id" element={<ServicesDomains />} />
+                    <Route path="emailmarketing" element={<ServicesEmailMarketing />} />
+                </Route>
                 <Route path="/services/change-primary-domain/:id" element={<ServicesChangePrimaryDomain />} />
-                <Route path="/services/emailmarketing" element={<ServicesEmailMarketing />} />
 
                 <Route path="/billing/details" element={<BillingDetails />} />
                 <Route path="/billing/payment-history" element={<BillingPaymentHistory />} />

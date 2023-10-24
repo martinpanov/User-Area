@@ -3,7 +3,9 @@
     --color-primary: #b2b2f8;
     --color-primary-hovered: #8c8cf9;
     --background-button-primary: #b2b2f8;
+    --background-button-primary-hovered: #8c8cf9;
     --background-button-secondary: #484662;
+    --background-button-secondary-hovered: #4c4a69;
     --header-background: #363636;
     --header-navigation-color: #fff;
     --header-navigation-color-hover: #fff;
@@ -14,6 +16,7 @@
     --drawer-icon-background-hover: #464e5b;
     --typography-white: #fff;
     --typography-dark: #fff;
+    --typography-light: #c2c2c2;
     --border-color-default: #fff;
     --border-color-outer: #858484;
     --logo-fill-color-default: #fff;

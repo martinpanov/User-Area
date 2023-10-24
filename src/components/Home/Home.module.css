@@ -72,7 +72,7 @@
     padding: 1.5rem 0rem
 }
 
-.websites-and-services__button {
+.websites-and-services__card__button {
     all: unset;
     padding: 0.5rem 1rem;
     color: var(--color-button-white);
@@ -81,7 +81,6 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.875rem;
-    cursor: pointer;
 }
 
 .tips-and-suggestions__wrapper {
@@ -106,18 +105,23 @@
     margin: 0 auto;
 }
 
-.tips-and-suggestions__card-link-and-arrow {
+.tips-and-suggestions__card__link-arrow {
     display: flex;
     gap: 0.5rem;
+    text-decoration: none;
 }
 
 .tips-and-suggestions__load-more {
     all: unset;
     display: block;
     margin: 0 auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.75rem;
+    background-color: transparent;
 }
 
-.tips-and-suggestions__card-link-text, .tips-and-suggestions__load-more {
+.tips-and-suggestions__card__link-text,
+.tips-and-suggestions__load-more {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -129,7 +133,7 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: 1rem 0rem;
-    gap: 1.25rem;
+    gap: 2rem;
 }
 
 .recent-blog-posts__card {
@@ -138,26 +142,30 @@
     border-radius: 0.75rem;
 }
 
-.recent-blog-posts__card-image-container {
+.recent-blog-posts__card__image-container {
     filter: brightness(50%);
 }
 
-.recent-blog-posts__card-text-container {
-    padding: 1.75rem 1.25rem 0.75rem;
+.recent-blog-posts__card__text-container {
+    padding: 1.75rem 2rem 0.75rem;
     border-bottom: 1px solid var(--border-color-outer);
 }
 
-.recent-blog-posts__card-heading {
+.recent-blog-posts__card__heading {
     font-size: 1.5rem;
 }
 
-.recent-blog-posts__card-time-link-container {
+.recent-blog-posts__card__time-link-container {
     display: flex;
     justify-content: space-between;
     padding: 1.75rem;
 }
 
-.recent-blog-posts__card-link {
+.recent-blog-posts__card__time {
+    color: var(--typography-light);
+}
+
+.recent-blog-posts__card__link {
     text-decoration: none;
     color: var(--color-primary);
 }
@@ -173,7 +181,7 @@
         padding: 2rem 0rem;
         text-align: center;
     }
-    
+
     .tips-and-suggestions__svg {
         display: inline-block;
         margin: 0;
@@ -188,16 +196,17 @@
         flex-direction: column;
     }
 
-    .recent-blog-posts__card-text-container {
+    .recent-blog-posts__card__text-container {
         flex: 1;
         border-bottom: none;
     }
 
-    .recent-blog-posts__card-heading {
-        margin-bottom: 1rem;
+    .recent-blog-posts__card__heading {
+        margin-bottom: 0.75rem;
+        line-height: 2rem;
     }
 
-    .recent-blog-posts__card-link:hover {
+    .recent-blog-posts__card__link:hover {
         color: var(--color-primary-hovered);
     }
 }
@@ -205,6 +214,61 @@
 @media (min-width: 1024px) {
     .tips-and-suggestions__wrapper {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero__button,
+    .websites-and-services__card__button,
+    .tips-and-suggestions__load-more {
+        cursor: pointer;
+        transition: background-color 300ms;
+    }
+
+    .hero__button:hover {
+        background-color: var(--background-button-secondary-hovered);
+    }
+
+    .websites-and-services__card__button:hover {
+        background-color: var(--background-button-primary-hovered);
+    }
+
+    .tips-and-suggestions__card__link-text {
+        position: relative;
+    }
+
+    .tips-and-suggestions__card__link-text:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        transform-origin: bottom right;
+        transition: transform 250ms ease-out;
+    }
+
+    .tips-and-suggestions__card__link-text:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .tips-and-suggestions__card__link-text:hover~.tips-and-suggestions__card__arrow {
+        animation: boomerang .3s ease-in .3s 2 alternate
+    }
+
+    @keyframes boomerang {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(5px);
+        }
+    }
+
+    .tips-and-suggestions__load-more:hover {
+        background-color: var(--background-button-secondary-hovered);
     }
 }
 

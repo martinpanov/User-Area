@@ -40,28 +40,28 @@ function WebsitesAndServices() {
             <div className={styles["websites-and-services__wrapper"]}>
                 <div className={styles["websites-and-services__card"]}>
                     <WebsitesSVG />
-                    <h3 className={styles["websites-and-services__card-heading"]}>Websites</h3>
-                    <p className={styles["websites-and-services__card-text"]}>You have 8 websites</p>
-                    <button className={styles["websites-and-services__button"]}>Manage</button>
+                    <h3 className={styles["websites-and-services__card__heading"]}>Websites</h3>
+                    <p className={styles["websites-and-services__card__text"]}>You have 8 websites</p>
+                    <button className={styles["websites-and-services__card__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
                     <HostingSVG />
-                    <h3 className={styles["websites-and-services__card-heading"]}>Hosting</h3>
-                    <span className={styles["websites-and_services__card-text"]}>GoGeek</span>
-                    <p className={styles["websites-and-services__card-text"]}>Expires on Jul 3, 2024</p>
-                    <button className={styles["websites-and-services__button"]}>Manage</button>
+                    <h3 className={styles["websites-and-services__card__heading"]}>Hosting</h3>
+                    <span className={styles["websites-and_services__card__text"]}>GoGeek</span>
+                    <p className={styles["websites-and-services__card__text"]}>Expires on Jul 3, 2024</p>
+                    <button className={styles["websites-and-services__card__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
                     <DomainsSVG />
-                    <h3 className={styles["websites-and-services__card-heading"]}>Domains</h3>
-                    <p className={styles["websites-and-services__card-text"]}>You have 3 domains</p>
-                    <button className={styles["websites-and-services__button"]}>Manage</button>
+                    <h3 className={styles["websites-and-services__card__heading"]}>Domains</h3>
+                    <p className={styles["websites-and-services__card__text"]}>You have 3 domains</p>
+                    <button className={styles["websites-and-services__card__button"]}>Manage</button>
                 </div>
                 <div className={styles["websites-and-services__card"]}>
                     <EmailMarketingSVG />
-                    <h3 className={styles["websites-and-services__card-heading"]}>Email Marketing</h3>
-                    <p className={styles["websites-and-services__card-text"]}>You have no Email Marketing plans</p>
-                    <button className={styles["websites-and-services__button"]}>Learn More</button>
+                    <h3 className={styles["websites-and-services__card__heading"]}>Email Marketing</h3>
+                    <p className={styles["websites-and-services__card__text"]}>You have no Email Marketing plans</p>
+                    <button className={styles["websites-and-services__card__button"]}>Learn More</button>
                 </div>
             </div>
         </section>
@@ -151,10 +151,10 @@ function TipsAndSuggestions() {
                 {TipsAndSuggestionsInfo.slice(0, 4).map(card => (
                     <div className={styles["tips-and-suggestions__card"]}>
                         {card.svg}
-                        <h3 className={styles["tips-and-suggestions__card-heading"]}>{card.heading}</h3>
-                        <p className={styles["tips-and-suggestions__card-text"]}>{card.text}</p>
-                        <Link className={styles["tips-and-suggestions__card-link-and-arrow"]} to="">
-                            <span className={styles["tips-and-suggestions__card-link-text"]}>{card.link}</span>
+                        <h3 className={styles["tips-and-suggestions__card__heading"]}>{card.heading}</h3>
+                        <p className={styles["tips-and-suggestions__card__text"]}>{card.text}</p>
+                        <Link className={styles["tips-and-suggestions__card__link-arrow"]} to="">
+                            <span className={styles["tips-and-suggestions__card__link-text"]}>{card.link}</span>
                             <Arrow />
                         </Link>
                     </div>
@@ -162,10 +162,10 @@ function TipsAndSuggestions() {
                 {isLoadMore[0] && TipsAndSuggestionsInfo.slice(4, 8).map(card => (
                     <div className={styles["tips-and-suggestions__card"]}>
                         {card.svg}
-                        <h3 className={styles["tips-and-suggestions__card-heading"]}>{card.heading}</h3>
-                        <p className={styles["tips-and-suggestions__card-text"]}>{card.text}</p>
-                        <Link className={styles["tips-and-suggestions__card-link-and-arrow"]} to="">
-                            <span className={styles["tips-and-suggestions__card-link-text"]}>{card.link}</span>
+                        <h3 className={styles["tips-and-suggestions__card__heading"]}>{card.heading}</h3>
+                        <p className={styles["tips-and-suggestions__card__text"]}>{card.text}</p>
+                        <Link className={styles["tips-and-suggestions__card__link-arrow"]} to="">
+                            <span className={styles["tips-and-suggestions__card__link-text"]}>{card.link}</span>
                             <Arrow />
                         </Link>
                     </div>
@@ -174,10 +174,10 @@ function TipsAndSuggestions() {
                 {isLoadMore[1] && TipsAndSuggestionsInfo.slice(8).map(card => (
                     <div className={styles["tips-and-suggestions__card"]}>
                         {card.svg}
-                        <h3 className={styles["tips-and-suggestions__card-heading"]}>{card.heading}</h3>
-                        <p className={styles["tips-and-suggestions__card-text"]}>{card.text}</p>
-                        <Link className={styles["tips-and-suggestions__card-link-and-arrow"]} to="">
-                            <span className={styles["tips-and-suggestions__card-link-text"]}>{card.link}</span>
+                        <h3 className={styles["tips-and-suggestions__card__heading"]}>{card.heading}</h3>
+                        <p className={styles["tips-and-suggestions__card__text"]}>{card.text}</p>
+                        <Link className={styles["tips-and-suggestions__card__link-arrow"]} to="">
+                            <span className={styles["tips-and-suggestions__card__link-text"]}>{card.link}</span>
                             <Arrow />
                         </Link>
                     </div>
@@ -199,63 +199,63 @@ function RecentBlogPosts() {
             <h2 className={styles["recent-blog-posts__heading"]}>Recent Blog Posts</h2>
             <div className={styles["recent-blog-posts__wrapper"]}>
                 <div className={styles["recent-blog-posts__card"]}>
-                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                    <div className={styles["recent-blog-posts__card__image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Response_to_HTTP2_Rapid_Reset-752x342.jpg" alt="http2" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-text-container"]}>
-                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                    <div className={styles["recent-blog-posts__card__text-container"]}>
+                        <h4 className={styles["recent-blog-posts__card__heading"]}>
                             Response to HTTP/2 Rapid Reset: SiteGround's Swift Action Against a Novel Vulnerability
                         </h4>
                         {windowWidth > 800 ? (
-                            <p className={styles["recent-blog-posts__card-text"]}>
+                            <p className={styles["recent-blog-posts__card__text"]}>
                                 In the dynamic world of cybersecurity, it's not unusual to encounter new challenges. Recently, a novel vulnerability, dubbed the "HTTP/2 Rapid Reset" attack, was discovered. Given that HTTP/2 is considered a relatively new protocol, we see more modern and more clever ways to perform attacks every day. But this latest vulnerability has the potential to…
                             </p>
                         ) : null
                         }
                     </div>
-                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
-                        <time>10/11/2023</time>
-                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    <div className={styles["recent-blog-posts__card__time-link-container"]}>
+                        <time className={styles["recent-blog-posts__card__time"]}>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card__link"]} to="">Read this post</Link>
                     </div>
                 </div>
                 <div className={styles["recent-blog-posts__card"]}>
-                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                    <div className={styles["recent-blog-posts__card__image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/Exim-security-vulnerability_1400x700-752x342.jpg" alt="exim" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-text-container"]}>
-                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                    <div className={styles["recent-blog-posts__card__text-container"]}>
+                        <h4 className={styles["recent-blog-posts__card__heading"]}>
                             Exim's Mail Vulnerability: A Tale of Swift Action and Unaffected SiteGround Clients
                         </h4>
                         {windowWidth > 800 ? (
-                            <p className={styles["recent-blog-posts__card-text"]}>
+                            <p className={styles["recent-blog-posts__card__text"]}>
                                 Picture this: a lively party, a toddler's bedtime routine, a road trip - this is what three of our security engineers were in the middle of on that particular Saturday, September 30th. Suddenly, their phones beep at the same time in unison, even though far apart, cutting through the noise of the party, the hush…
                             </p>
                         ) : null
                         }
                     </div>
-                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
-                        <time>10/11/2023</time>
-                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    <div className={styles["recent-blog-posts__card__time-link-container"]}>
+                        <time className={styles["recent-blog-posts__card__time"]}>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card__link"]} to="">Read this post</Link>
                     </div>
                 </div>
                 <div className={styles["recent-blog-posts__card"]}>
-                    <div className={styles["recent-blog-posts__card-image-container"]}>
+                    <div className={styles["recent-blog-posts__card__image-container"]}>
                         <img src="https://newblog.siteground.com/en/wp-content/uploads/sites/2/2023/10/tw_chat_recap_email_marketing-752x342.jpg" alt="expert-chat" />
                     </div>
-                    <div className={styles["recent-blog-posts__card-text-container"]}>
-                        <h4 className={styles["recent-blog-posts__card-heading"]}>
+                    <div className={styles["recent-blog-posts__card__text-container"]}>
+                        <h4 className={styles["recent-blog-posts__card__heading"]}>
                             [Expert Chat] Getting Started with Email Marketing
                         </h4>
                         {windowWidth > 800 ? (
-                            <p className={styles["recent-blog-posts__card-text"]}>
+                            <p className={styles["recent-blog-posts__card__text"]}>
                                 Whether you have a small personal or portfolio site, an eCommerce store, or are just starting up a small business website, there is one thing that can effectively boost your online presence at every stage - email marketing. To help you get started and grow your email marketing efforts, right on time for the upcoming…
                             </p>
                         ) : null
                         }
                     </div>
-                    <div className={styles["recent-blog-posts__card-time-link-container"]}>
-                        <time>10/11/2023</time>
-                        <Link className={styles["recent-blog-posts__card-link"]} to="">Read this post</Link>
+                    <div className={styles["recent-blog-posts__card__time-link-container"]}>
+                        <time className={styles["recent-blog-posts__card__time"]}>10/11/2023</time>
+                        <Link className={styles["recent-blog-posts__card__link"]} to="">Read this post</Link>
                     </div>
                 </div>
             </div>

@@ -108,6 +108,7 @@ export function Arrow() {
             height="22"
             data-name="Layer 1"
             viewBox="0 0 22 16"
+            className={styles["tips-and-suggestions__card__arrow"]}
         >
             <path
                 fill="#B2B2F8"
