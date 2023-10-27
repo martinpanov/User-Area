@@ -34,12 +34,54 @@ export default function Header() {
                     <>
                         <nav className={styles["header__navigation"]}>
                             <ul className={styles["header__list-items"]} role='list'>
-                                <li onClick={() => setActiveLink('home')} className={`${styles["header__list-item"]} ${activeLink === 'home' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/">Home</Link></li>
-                                <li onClick={() => setActiveLink('websites')} className={`${styles["header__list-item"]} ${activeLink === 'websites' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/websites/list">Websites</Link></li>
-                                <li onClick={() => setActiveLink('services')} className={`${styles["header__list-item"]} ${activeLink === 'services' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/services/hosting">Services</Link></li>
-                                <li onClick={() => setActiveLink('billing')} className={`${styles["header__list-item"]} ${activeLink === 'billing' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/billing/details">Billing</Link></li>
-                                <li onClick={() => setActiveLink('referrals')} className={`${styles["header__list-item"]} ${activeLink === 'referrals' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/referral/program">Referrals</Link></li>
-                                <li onClick={() => setActiveLink('marketplace')} className={`${styles["header__list-item"]} ${activeLink === 'marketplace' ? styles["header__list-item--active"] : ''}`}><Link className={styles["header__nav-link"]} to="/marketplace/hosting">Marketplace</Link></li>
+                                <li className={styles["header__list-item"]}>
+                                    <Link
+                                        onClick={() => setActiveLink('home')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'home' ? styles["header__link--active"] : ''}`}
+                                        to="/"
+                                    >Home
+                                    </Link>
+                                </li>
+                                <li className={styles["header__list-item"]}>
+                                    <Link
+                                        onClick={() => setActiveLink('websites')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'websites' ? styles["header__link--active"] : ''}`}
+                                        to="/websites/list"
+                                    >Websites
+                                    </Link>
+                                </li>
+                                <li className={styles["header__list-item"]}>
+                                    <Link
+                                        onClick={() => setActiveLink('services')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'services' ? styles["header__link--active"] : ''}`}
+                                        to="/services/hosting"
+                                    >Services
+                                    </Link>
+                                </li>
+                                <li className={styles["header__list-item"]}>
+                                    <Link
+                                        onClick={() => setActiveLink('billing')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'billing' ? styles["header__link--active"] : ''}`}
+                                        to="/billing/details"
+                                    >Billing
+                                    </Link>
+                                </li>
+                                <li className={styles["header__list-item"]}>
+                                    <Link
+                                        onClick={() => setActiveLink('referrals')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'referrals' ? styles["header__link--active"] : ''}`}
+                                        to="/referral/program"
+                                    >Referrals
+                                    </Link>
+                                </li>
+                                <li className={`${styles["header__list-item"]} `}>
+                                    <Link
+                                        onClick={() => setActiveLink('marketplace')}
+                                        className={`${styles["header__nav-link"]} ${activeLink === 'marketplace' ? styles["header__link--active"] : ''}`}
+                                        to="/marketplace/hosting"
+                                    >Marketplace
+                                    </Link>
+                                </li>
                             </ul>
                         </nav>
                         <div className={styles["header__spacer"]}></div>
