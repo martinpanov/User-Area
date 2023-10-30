@@ -27,6 +27,16 @@
     --color-button-white: #363636;
 }
 
+html {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -63,7 +73,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
+    min-height: 100%;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: var(--font-family-default);
